@@ -1,8 +1,6 @@
 import React from "react";
 import './RatingPopup.css'
-import app from "../App";
 
-type RatingPopupProps = {}
 
 type RatingPopupState = {
     rating: number,
@@ -49,9 +47,9 @@ export class RatingPopup extends React.Component<{}, RatingPopupState> {
                     don’t hesitate to get in touch!
                 </div>
                 <div className="attribution">
-                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-                    Mentor</a>.
-                    Coded by <a href="#">Your Name Here</a>.
+                    Challenge by Frontend
+                    Mentor.
+                    Coded by Leo.
                 </div>
             </div>
         )
