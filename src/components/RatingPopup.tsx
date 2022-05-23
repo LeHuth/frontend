@@ -22,18 +22,18 @@ export class RatingPopup extends React.Component<{}, RatingPopupState> {
 
     chooseRating = () => {
         return (
-            <div>
+            <div id={"chooseRating"}>
                 <h1>How did we do?</h1>
                 <p>Please let us know how we did with your support request. All feedback is appreciated
                     to help us improve our offering!</p>
                 <div>
-                    <button onClick={this.handleClick.bind(this, 1)}>1</button>
-                    <button onClick={this.handleClick.bind(this, 2)}>2</button>
-                    <button onClick={this.handleClick.bind(this, 3)}>3</button>
-                    <button onClick={this.handleClick.bind(this, 4)}>4</button>
-                    <button onClick={this.handleClick.bind(this, 5)}>5</button>
+                    <button  className={this.state.rating === 1 ? 'active' : ''} onClick={this.handleClick.bind(this, 1)}>1</button>
+                    <button  className={this.state.rating === 2 ? 'active' : ''} onClick={this.handleClick.bind(this, 2)}>2</button>
+                    <button  className={this.state.rating === 3 ? 'active' : ''} onClick={this.handleClick.bind(this, 3)}>3</button>
+                    <button  className={this.state.rating === 4 ? 'active' : ''} onClick={this.handleClick.bind(this, 4)}>4</button>
+                    <button  className={this.state.rating === 5 ? 'active' : ''} onClick={this.handleClick.bind(this, 5)}>5</button>
                 </div>
-                <button onClick={() => {this.setState({showResult: true})}}>Submit</button>
+                <button className={this.state.rating === 0 ? 'disabled' : ''} id={"submitButton"} onClick={() => {this.setState({showResult: true})}}>SUBMIT</button>
             </div>)
     }
 
